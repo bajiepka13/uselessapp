@@ -8,6 +8,7 @@ public class UselessappApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UselessappApplication.class, args);
+		String s = "Моя попытка №5";
 	}
 
 }
