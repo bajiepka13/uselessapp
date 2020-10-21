@@ -24,13 +24,27 @@ public class LoopsTests {
                 "Реализация товаров услуг № 3 от 11.10.2020"
         );
 
+        //  ctrl + space контекстная подсказка
+        //  ctrl + shift + space умная контекстная подсказка
+        //  ctrl + q описание метода
+        //  ctrl + m1 перейти внутрь
+        //  ctrl + p описание параметров (внутри скобок)
+
         Integer realizations = 0;
         Integer bills = 0;
+
         //  Напиши цикл по списку документов documents, который увеличит значения realizations и bills так,
         //  чтобы они были равен totalRealizations и totalBills соответственно
         //  Цикл пиши ниже:
-
+        for (String document : documents) {
+            if (document.startsWith("Реализация")) {
+                realizations++;
+            } else if (document.startsWith("Cчёт")) {
+                bills++;
+            }
+        }
         //  Конец цикла
+
         Assertions.assertThat(realizations).isEqualTo(totalRealizations);
         Assertions.assertThat(bills).isEqualTo(totalBills);
     }
